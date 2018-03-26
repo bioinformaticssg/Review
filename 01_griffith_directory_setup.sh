@@ -17,7 +17,8 @@ export SUB_DIR=${ROOT_DIR}/Review
 export REF_DIR=${ROOT_DIR}/griffith_data/refs
 # Change to indexed reference genome
 export GENOME="22"
-export SPIKE="ERCC92"
+
+############################################################################################
 
 # These variables identify the paths for the genome reference and gene features files 
 export REF=${REF_DIR}/${GENOME}
@@ -27,6 +28,8 @@ export REF_GTF=${REF}.gtf
 # These variables identify the paths for the directories for your project result files
 # This is your project directory
 export EXP_DIR=${SUB_DIR}/${EXP_NAME}
+# This is your scripts directory
+export SCRIPT_DIR=${EXP_DIR}/scripts
 # This is the directory for your data
 export DATA_DIR=${EXP_DIR}/data
 # This is the directory for your alignment result files
@@ -59,6 +62,7 @@ export TRIM_COUNTS_DIR=${EXP_DIR}/trim_counts
 
 # Here we make the directories that may not already exist.
 # -p is a flag that tells the the mkdir program to ignore any warnings such as the directory already existing.
+mkdir -p ${SCRIPT_DIR}
 mkdir -p ${DATA_DIR}
 mkdir -p ${ALIGNMENTS_DIR}
 mkdir -p ${COUNTS_DIR}

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#$ -N trim_qc_PE_demo       # name of the job
+#$ -N trim_qc_demo       # name of the job
 #$ -o /data/users/sborrego/BioinformaticsSG/Review/griffith_analysis_demo/trim_data/trim_qc_PE_demo.out   # contains what would normally be printed to stdout
 #$ -e /data/users/sborrego/BioinformaticsSG/Review/griffith_analysis_demo/trim_data/trim_qc_PE_demo.err   # file name to print standard error messages to. 
 #$ -q free64,som,asom       # request cores from the free64, som, asom queues.
@@ -21,7 +21,7 @@ BASENAME="HBR"
 DIR=/data/users/$USER/BioinformaticsSG/Reviewgriffith_analysis_demo
 
 TRIM_DATA_DIR=${DIR}/trim_data
-TRIM_QC_DIR=${PE_DIR}/trim_fastqc_out
+TRIM_QC_DIR=${TRIM_DATA_DIR}/trim_fastqc_out
 TRIM_QC_HTML_DIR=${TRIM_QC_DIR}/trim_fastqc_html
 HTML="trim_fastqc_html"
 

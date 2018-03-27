@@ -32,31 +32,32 @@ TRIMMOMATIC_DIR=/data/apps/trimmomatic/0.35/trimmomatic-0.35.jar
 
 for SAMPLE_N in $(seq 1 3); do
 
-        # Build the name of the files.
-        R1=$(head -n ${SAMPLE_N} ${DATA_FILENAMES_R1} | tail -n 1)
-        R2=$(head -n ${SAMPLE_N} ${DATA_FILENAMES_R2} | tail -n 1)
-        OUTPUT=${TRIM_DATA_DIR}/${BASENAME}_${SAMPLE_N}.fq.gz
+    # Build the name of the files.
+    R1=$(head -n ${SAMPLE_N} ${DATA_FILENAMES_R1} | tail -n 1)
+    R2=$(head -n ${SAMPLE_N} ${DATA_FILENAMES_R2} | tail -n 1)
+    OUTPUT=${TRIM_DATA_DIR}/${BASENAME}_${SAMPLE_N}.fq.gz
 
-        TRIMMER="HEADCROP:1"
+    TRIMMER="HEADCROP:1"
 
-        java -jar ${TRIMMOMATIC_DIR} \
-        PE \
-        -threads 8 \
-        ${R1} ${R2} \
-        -baseout ${OUTPUT} \
-        ${TRIMMER}
+    java -jar ${TRIMMOMATIC_DIR} \
+    PE \
+    -threads 8 \
+    ${R1} ${R2} \
+    -baseout ${OUTPUT} \
+    ${TRIMMER}
 
-     done
 done
 
 # FastQC on  trimmed data - paired data files only as indicated by the '\*P.\*'
 
 for SAMPLE in `find ${TRIM_DATA_DIR} -name \*P.\*`; do
+
     fastqc ${SAMPLE} \
     --outdir ${TRIM_QC_DIR}
 
     # I am moving all the html files to a new directory
     mv ${TRIM_QC_DIR}/*.html ${TRIM_QC_HTML_DIR}
+
 done
 
 # I am compressing the directory containing all the html files into one file

@@ -36,11 +36,10 @@ export DATA_DIR=${EXP_DIR}/data
 export ALIGNMENTS_DIR=${EXP_DIR}/alignments
 # This is the directory for your abundance estimation result files
 export COUNTS_DIR=${EXP_DIR}/counts
-# This is the directory for your differential expression (DE) analysis result files
-export DE_DIR=${EXP_DIR}/DE_analysis
+
 
 # This is the directory for your FastQC result files
-export QC_OUT_DIR=${EXP_DIR}/fastqc_out
+export QC_OUT_DIR=${EXP_DIR}/fastqc
 # This is the subdirectory for your HTML FastQC result files
 export QC_HTML_DIR=${QC_OUT_DIR}/fastqc_html
 
@@ -68,7 +67,6 @@ mkdir -p ${SCRIPT_DIR}
 mkdir -p ${DATA_DIR}
 mkdir -p ${ALIGNMENTS_DIR}
 mkdir -p ${COUNTS_DIR}
-mkdir -p ${DE_DIR}
 
 mkdir -p ${QC_OUT_DIR}
 mkdir -p ${QC_HTML_DIR}

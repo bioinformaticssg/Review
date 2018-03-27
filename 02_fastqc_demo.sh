@@ -12,7 +12,7 @@ module load blcr
 module load fastqc/0.11.7
 
 DATA_FILENAMES_R1=/data/users/sborrego/BioinformaticsSG/Review/griffith_analysis_demo/data/HBR_data_R1_filenames.txt
-DATA_FILENAMES_R2=/data/users/sborrego/BioinformaticsSG/Review/griffith_analysis_demo/data/HBR_data__R2_filenames.txt
+DATA_FILENAMES_R2=/data/users/sborrego/BioinformaticsSG/Review/griffith_analysis_demo/data/HBR_data_R2_filenames.txt
 QC_OUT_DIR=/data/users/sborrego/BioinformaticsSG/Review/griffith_analysis_demo/fastqc_out
 QC_HTML_DIR=/data/users/sborrego/BioinformaticsSG/Review/griffith_analysis_demo/fastqc_out/fastqc_html
 HTML="fastqc_html"

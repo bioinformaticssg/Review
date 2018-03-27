@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#$ -N trim_qc_demo       # name of the job
-#$ -o /data/users/sborrego/BioinformaticsSG/Review/griffith_analysis_demo/trim_data/trim_qc_PE_demo.out   # contains what would normally be printed to stdout
-#$ -e /data/users/sborrego/BioinformaticsSG/Review/griffith_analysis_demo/trim_data/trim_qc_PE_demo.err   # file name to print standard error messages to. 
-#$ -q free64,som,asom       # request cores from the free64, som, asom queues.
+#$ -N trim_qc_demo          # name of the job
+#$ -o /data/users/sborrego/BioinformaticsSG/Review/griffith_analysis_demo/trim_data/trim_qc_demo.out   # contains what would normally be printed to stdout
+#$ -e /data/users/sborrego/BioinformaticsSG/Review/griffith_analysis_demo/trim_data/trim_qc_demo.err   # file name to print standard error messages to. 
+#$ -q pub8i                 # request cores from the free64, som, asom queues.
 #$ -pe openmp 8             # request parallel environment. You can include a minimum and maximum core count.
 #$ -m beas                  # send you email of job status (b)egin, (e)rror, (a)bort, (s)uspend
 #$ -ckpt blcr               # (c)heckpoint: writes a snapshot of a process to disk, (r)estarts the process after the checkpoint is c$
@@ -30,9 +30,6 @@ TRIMMOMATIC_DIR=/data/apps/trimmomatic/0.35/trimmomatic-0.35.jar
 
 # TRIMMOMATIC for paired end samples
 
-RUNLOG=${TRIM_DATA_DIR}/runlog.txt
-echo "Run by `whoami` on `date`" > $RUNLOG
-
 for SAMPLE_N in $(seq 1 3); do
 
         # Build the name of the files.
@@ -40,18 +37,16 @@ for SAMPLE_N in $(seq 1 3); do
         R2=$(head -n SAMPLE_N ${DATA_FILENAMES_R2} | tail -n 1)
         OUTPUT=${TRIM_DATA_DIR}/${BASENAME)_${SAMPLE_N}.fq.gz
 
-        TRIMMER="HEADCROP:1 LEADING:3 TRAILING:1 SLIDINGWINDOW:4:15 MINLEN:50"
+        TRIMMER="HEADCROP:1"
 
         echo "*** Trimming: ${SAMPLE}_${REPLICATE}"
-        echo "${BASENAME}_${SAMPLE_N} Summary" >> $RUNLOG
 
         java -jar ${TRIMMOMATIC_DIR} \
         PE \
         -threads 8 \
         ${R1} ${R2} \
         -baseout ${OUTPUT} \
-        ${TRIMMER} \
-        2>> $RUNLOG
+        ${TRIMMER}
 
      done
 done

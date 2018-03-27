@@ -18,12 +18,12 @@ DATA_FILENAMES_R1=/data/users/sborrego/BioinformaticsSG/Review/griffith_analysis
 DATA_FILENAMES_R2=/data/users/sborrego/BioinformaticsSG/Review/griffith_analysis_demo/data/HBR_data_R2_filenames.txt
 BASENAME="HBR"
 
-DIR=/data/users/$USER/BioinformaticsSG/Review/griffith_analysis_demo
+TRIM_DIR=/data/users/$USER/BioinformaticsSG/Review/griffith_analysis_demo/trimmed_analysis
 
-TRIM_DATA_DIR=${DIR}/trim_data
-TRIM_QC_DIR=${TRIM_DATA_DIR}/trim_fastqc_out
-TRIM_QC_HTML_DIR=${TRIM_QC_DIR}/trim_fastqc_html
-HTML="trim_fastqc_html"
+TRIM_DATA_DIR=${TRIM_DIR}/trimmed_data
+TRIM_QC_DIR=${TRIM_DIR}/trimmed_fastqc
+TRIM_QC_HTML_DIR=${TRIM_QC_DIR}/trimmed_fastqc_html
+HTML="trimmed_fastqc_html"
 
 TRIMMOMATIC_DIR=/data/apps/trimmomatic/0.35/trimmomatic-0.35.jar 
 

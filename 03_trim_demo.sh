@@ -35,7 +35,7 @@ for SAMPLE_N in $(seq 1 3); do
         # Build the name of the files.
         R1=$(head -n SAMPLE_N ${DATA_FILENAMES_R1} | tail -n 1)
         R2=$(head -n SAMPLE_N ${DATA_FILENAMES_R2} | tail -n 1)
-        OUTPUT=${TRIM_DATA_DIR}/${BASENAME)_${SAMPLE_N}.fq.gz
+        OUTPUT=${TRIM_DATA_DIR}/${BASENAME}_${SAMPLE_N}.fq.gz
 
         TRIMMER="HEADCROP:1"
 

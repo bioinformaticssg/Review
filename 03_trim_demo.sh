@@ -18,7 +18,7 @@ DATA_FILENAMES_R1=/data/users/sborrego/BioinformaticsSG/Review/griffith_analysis
 DATA_FILENAMES_R2=/data/users/sborrego/BioinformaticsSG/Review/griffith_analysis_demo/data/HBR_data_R2_filenames.txt
 BASENAME="HBR"
 
-DIR=/data/users/$USER/BioinformaticsSG/Reviewgriffith_analysis_demo
+DIR=/data/users/$USER/BioinformaticsSG/Review/griffith_analysis_demo
 
 TRIM_DATA_DIR=${DIR}/trim_data
 TRIM_QC_DIR=${TRIM_DATA_DIR}/trim_fastqc_out

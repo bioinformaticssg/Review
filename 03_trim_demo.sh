@@ -39,8 +39,6 @@ for SAMPLE_N in $(seq 1 3); do
 
         TRIMMER="HEADCROP:1"
 
-        echo "*** Trimming: ${SAMPLE}_${REPLICATE}"
-
         java -jar ${TRIMMOMATIC_DIR} \
         PE \
         -threads 8 \

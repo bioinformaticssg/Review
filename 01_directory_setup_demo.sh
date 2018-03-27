@@ -53,9 +53,9 @@ export TRIM_QC_DIR=${TRIM_DIR}/trimmed_fastqc
 # This is the subdirectory for your HTML FastQC result files for your trimmed data
 export TRIM_QC_HTML_DIR=${TRIM_QC_DIR}/trim_fastqc_html
 # This is the directory for your alignment result files from your trimmed data
-export TRIM_ALIGNMENTS_DIR=${EXP_DIR}/trimmed_alignments
+export TRIM_ALIGNMENTS_DIR=${TRIM_DIR}/trimmed_alignments
 # This is the directory for your abundance estimated result files from your trimmed data
-export TRIM_COUNTS_DIR=${EXP_DIR}/trimmed_counts
+export TRIM_COUNTS_DIR=${TRIM_DIR}/trimmed_counts
 
 # Below is an example of setting a path to file that you may need for the program you are using.
 # These files are used to remove the adapters from the sequences. 

@@ -44,16 +44,18 @@ export QC_OUT_DIR=${EXP_DIR}/fastqc_out
 # This is the subdirectory for your HTML FastQC result files
 export QC_HTML_DIR=${QC_OUT_DIR}/fastqc_html
 
+# This is the direcotry for your trimmed data anlaysis
+export TRIM_DIR=${EXP_DIR}/trimmed_analysis
 # This is the directory for your trimmed data
-export TRIM_DATA_DIR=${EXP_DIR}/trim_data
+export TRIM_DATA_DIR=${TRIM_DIR}/trimmed_data
 # This is the directory for your FastQC result files for your trimmed data
-export TRIM_QC_DIR=${EXP_DIR}/trim_fastqc_out
+export TRIM_QC_DIR=${TRIM_DIR}/trimmed_fastqc
 # This is the subdirectory for your HTML FastQC result files for your trimmed data
 export TRIM_QC_HTML_DIR=${TRIM_QC_DIR}/trim_fastqc_html
 # This is the directory for your alignment result files from your trimmed data
-export TRIM_ALIGNMENTS_DIR=${EXP_DIR}/trim_alignments
+export TRIM_ALIGNMENTS_DIR=${EXP_DIR}/trimmed_alignments
 # This is the directory for your abundance estimated result files from your trimmed data
-export TRIM_COUNTS_DIR=${EXP_DIR}/trim_counts
+export TRIM_COUNTS_DIR=${EXP_DIR}/trimmed_counts
 
 # Below is an example of setting a path to file that you may need for the program you are using.
 # These files are used to remove the adapters from the sequences. 
@@ -71,6 +73,7 @@ mkdir -p ${DE_DIR}
 mkdir -p ${QC_OUT_DIR}
 mkdir -p ${QC_HTML_DIR}
 
+mkdir -p ${TRIM_DIR}
 mkdir -p ${TRIM_DATA_DIR}
 mkdir -p ${TRIM_QC_DIR}
 mkdir -p ${TRIM_QC_HTML_DIR}

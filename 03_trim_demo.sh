@@ -27,7 +27,7 @@ HTML="trimmed_fastqc_html"
 
 TRIMMOMATIC_DIR=/data/apps/trimmomatic/0.35/trimmomatic-0.35.jar 
 
-sample_count=$(cat ${R1} | wc -l)
+sample_count=$(cat ${DATA_FILENAMES_R1} | wc -l)
 
 # TRIMMOMATIC for paired end samples
 

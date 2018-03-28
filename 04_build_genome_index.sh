@@ -8,9 +8,11 @@
 #$ -m beas
 #$ -ckpt blcr
 
-# Modified script orginally by A.Garibaldi(/data/users/$USER/BioinformaticsSG/Alignments/star_build.sh)
+# Modified script orginally by A.Garibaldi (https://github.com/bioinformaticssg/Alignments/blob/master/star_build.sh)
 
+# Make the script stop on any error.
 set -euxo pipefail
+echo $HOSTNAME
 
 module load blcr
 module load STAR/2.5.2a

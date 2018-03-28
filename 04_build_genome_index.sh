@@ -34,7 +34,7 @@ mkdir -p ${INDEX_DIR}
 # Use the alignment program STAR to build the genome indices
 STAR \
 --runMode genomeGenerate \
- --genomeDir $OUTPUT_DIR \
+ --genomeDir $INDEX_DIR \
  --genomeFastaFiles $REF_FASTA \
  --runThreadN $P \
  --sjdbGTFfile $REF_ANNOTATION \

@@ -10,6 +10,8 @@
 
 # Modified script orginally by A.Garibaldi(/data/users/$USER/BioinformaticsSG/Alignments/star_build.sh)
 
+set -euxo pipefail
+
 module load blcr
 module load STAR/2.5.2a
 module load enthought_python/7.3.2

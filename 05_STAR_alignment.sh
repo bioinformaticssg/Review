@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #$ -N PE_staralign_local
-#$ -o /data/users/$USER/BioinformaticsSG/griffith_analysis_demo/alignments/staralign.out
-#$ -e /data/users/$USER/BioinformaticsSG/griffith_analysis_demo/alignments/staralign.err
+#$ -o /data/users/$USER/BioinformaticsSG/Review/griffith_analysis_demo/alignments/staralign.out
+#$ -e /data/users/$USER/BioinformaticsSG/Review/griffith_analysis_demo/alignments/staralign.err
 #$ -q pub8i
 #$ -pe openmp 8
 #$ -m beas

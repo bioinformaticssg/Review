@@ -38,7 +38,7 @@ DATA_FILENAMES_R1=/data/users/sborrego/BioinformaticsSG/Review/griffith_analysis
 DATA_FILENAMES_R2=/data/users/sborrego/BioinformaticsSG/Review/griffith_analysis_demo/data/HBR_data_R2_filenames.txt
 BASENAME="HBR"
 
-sample_count=$(cat ${R1} | wc -l)
+sample_count=$(cat ${DATA_FILENAMES_R1} | wc -l)
 
 
 #####################

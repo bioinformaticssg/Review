@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #$ -N star_build
-#$ -o /data/users/$USER/BioinformaticsSG/griffith_data/refs/index_files/star_build.out 
-#$ -e /data/users/$USER/BioinformaticsSG/griffith_data/refs/index_files/star_build.err 
+#$ -o /data/users/$USER/BioinformaticsSG/griffith_data/refs/star_build.out 
+#$ -e /data/users/$USER/BioinformaticsSG/griffith_data/refs/star_build.err 
 #$ -q pub8i
 #$ -pe openmp 8
 #$ -m beas

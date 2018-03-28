@@ -6,7 +6,7 @@
 #$ -q pub8i
 #$ -pe openmp 8
 #$ -m beas
-#$ -ckpt blcrß
+#$ -ckpt blcr
 
 set -euxo pipefail
 

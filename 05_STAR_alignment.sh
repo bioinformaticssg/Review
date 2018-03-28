@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #$ -N PE_staralign_local
-#$ -o /data/users/$USER/BioinformaticsSG/griffith_data_demo/alignments/staralign.out # the name of the output file. not to be confused with the results.
-#$ -e /data/users/$USER/BioinformaticsSG/griffith_data_demo/alignments/staralign.err # name of the error file
+#$ -o /data/users/$USER/BioinformaticsSG/griffith_analysis_demo/alignments/staralign.out
+#$ -e /data/users/$USER/BioinformaticsSG/griffith_analysis_demo/alignments/staralign.err
 #$ -q pub8i
 #$ -pe openmp 8
 #$ -m beas

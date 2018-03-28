@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #$ -N trim_qc_demo          # name of the job
-#$ -o /data/users/sborrego/BioinformaticsSG/Review/griffith_analysis_demo/trim_data/trim_qc_demo.out   # contains what would normally be printed to stdout
-#$ -e /data/users/sborrego/BioinformaticsSG/Review/griffith_analysis_demo/trim_data/trim_qc_demo.err   # file name to print standard error messages to. 
+#$ -o /data/users/$USER/BioinformaticsSG/Review/griffith_analysis_demo/trim_data/trim_qc_demo.out   # contains what would normally be printed to stdout
+#$ -e /data/users/$USER/BioinformaticsSG/Review/griffith_analysis_demo/trim_data/trim_qc_demo.err   # file name to print standard error messages to. 
 #$ -q pub8i                 # request cores from the free64, som, asom queues.
 #$ -pe openmp 8             # request parallel environment. You can include a minimum and maximum core count.
 #$ -m beas                  # send you email of job status (b)egin, (e)rror, (a)bort, (s)uspend
@@ -14,8 +14,8 @@ module load blcr
 module load fastqc/0.11.7
 
 # These files contain the full path and names of the data files to be analyzed.
-DATA_FILENAMES_R1=/data/users/sborrego/BioinformaticsSG/Review/griffith_analysis_demo/data/HBR_data_R1_filenames.txt
-DATA_FILENAMES_R2=/data/users/sborrego/BioinformaticsSG/Review/griffith_analysis_demo/data/HBR_data_R2_filenames.txt
+DATA_FILENAMES_R1=/data/users/$USER/BioinformaticsSG/Review/griffith_analysis_demo/data/HBR_data_R1_filenames.txt
+DATA_FILENAMES_R2=/data/users/$USER/BioinformaticsSG/Review/griffith_analysis_demo/data/HBR_data_R2_filenames.txt
 BASENAME="HBR"
 
 TRIM_DIR=/data/users/$USER/BioinformaticsSG/Review/griffith_analysis_demo/trimmed_analysis

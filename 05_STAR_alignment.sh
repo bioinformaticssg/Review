@@ -32,10 +32,10 @@ REF_ANNOTATION=${REF_DIR}/chr22.ERCC92.gtf
 INDEX_DIR=${REF_DIR}/index_files
 
 # Directory for alignment result files
-ALIGNMENTS_DIR=/data/users/sborrego/BioinformaticsSG/Review/griffith_analysis_demo/alignments
+ALIGNMENTS_DIR=/data/users/$USER/BioinformaticsSG/Review/griffith_analysis_demo/alignments
 
-DATA_FILENAMES_R1=/data/users/sborrego/BioinformaticsSG/Review/griffith_analysis_demo/data/HBR_data_R1_filenames.txt
-DATA_FILENAMES_R2=/data/users/sborrego/BioinformaticsSG/Review/griffith_analysis_demo/data/HBR_data_R2_filenames.txt
+DATA_FILENAMES_R1=/data/users/$USER/BioinformaticsSG/Review/griffith_analysis_demo/data/HBR_data_R1_filenames.txt
+DATA_FILENAMES_R2=/data/users/$USER/BioinformaticsSG/Review/griffith_analysis_demo/data/HBR_data_R2_filenames.txt
 BASENAME="HBR"
 
 sample_count=$(cat ${DATA_FILENAMES_R1} | wc -l)

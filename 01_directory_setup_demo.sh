@@ -50,7 +50,7 @@ export TRIM_DATA_DIR=${TRIM_DIR}/trimmed_data
 # This is the directory for your FastQC result files for your trimmed data
 export TRIM_QC_DIR=${TRIM_DIR}/trimmed_fastqc
 # This is the subdirectory for your HTML FastQC result files for your trimmed data
-export TRIM_QC_HTML_DIR=${TRIM_QC_DIR}/trim_fastqc_html
+export TRIM_QC_HTML_DIR=${TRIM_QC_DIR}/trimmed_fastqc_html
 # This is the directory for your alignment result files from your trimmed data
 export TRIM_ALIGNMENTS_DIR=${TRIM_DIR}/trimmed_alignments
 # This is the directory for your abundance estimated result files from your trimmed data

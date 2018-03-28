@@ -1,12 +1,12 @@
 #!/bin/bash
 
-#$ -N fastQC_demo         # name of the job
-#$ -o /data/users/$USER/BioinformaticsSG/Review/griffith_analysis_demo/fastqc/fastqc.out  # contains what would normally be printed to stdout (the$
-#$ -e /data/users/$USER/BioinformaticsSG/Review/griffith_analysis_demo/fastqc/fastqc.err  # file name to print standard error messages to. These m$
-#$ -q pub8i			      # request cores from the free64, som, asom queues.
-#$ -pe openmp 8-64        # request parallel environment. You can include a minimum and maximum core count.
-#$ -m beas                # send you email of job status (b)egin, (e)rror, (a)bort, (s)uspend
-#$ -ckpt blcr             # (c)heckpoint: writes a snapshot of a process to disk, (r)estarts the process after the checkpoint is c$
+#$ -N fastQC_demo
+#$ -o /data/users/$USER/BioinformaticsSG/Review/griffith_analysis_demo/fastqc/fastqc.out
+#$ -e /data/users/$USER/BioinformaticsSG/Review/griffith_analysis_demo/fastqc/fastqc.err
+#$ -q pub8i
+#$ -pe openmp 8-64
+#$ -m beas
+#$ -ckpt blcr
 
 module load blcr
 module load fastqc/0.11.7
